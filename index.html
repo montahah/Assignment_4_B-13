@@ -66,9 +66,24 @@
     <!-- Buttons -->
     <section class="button container mx-auto mt-10">
       <div class="flex gap-5 justify-items-start">
-        <button class="btn bg-white px-10 py-5">All</button>
-        <button class="btn bg-white px-10 py-5">Interview</button>
-        <button class="btn bg-white px-10 py-5">Rejected</button>
+        <button
+          id="tab-all"
+          onclick="switchTab('all')"
+          class="btn btn-soft px-10 py-5">
+          All
+        </button>
+        <button
+          id="tab-interview"
+          onclick="switchTab('interview')"
+          class="btn btn-soft px-10 py-5">
+          Interview
+        </button>
+        <button
+          id="tab-rejected"
+          onclick="switchTab('rejected')"
+          class="btn btn-soft px-10 py-5">
+          Rejected
+        </button>
       </div>
     </section>
 
@@ -78,21 +93,31 @@
       class="jobs-section container mx-auto py-5 mt-5 space-y-5">
       <div id="singleJob" class="flex justify-between bg-white p-6 rounded-xl">
         <div class="jobs space-y-5">
-          <h2 class="text-[18px] font-bold">Mobile First Corp</h2>
-          <p class="font-medium text-gray-600">React Native Developer</p>
-          <p class="text-gray-600">Remote • Full-time • $130,000 - $175,000</p>
-          <p class="btn bg-[#EEF4FF]">Not Applied</p>
-          <p class="text-gray-600">
+          <h2 id="companyName" class="text-[18px] font-bold">
+            Mobile First Corp
+          </h2>
+          <p id="jobDesignation" class="font-medium text-gray-600">
+            React Native Developer
+          </p>
+          <p id="jobInfo" class="text-gray-600">
+            Remote • Full-time • $130,000 - $175,000
+          </p>
+          <p id="applyBtn" class="btn bg-[#EEF4FF]">Not Applied</p>
+          <p id="jobParagraph" class="text-gray-600">
             Build cross-platform mobile applications using React Native. Work on
             products used by millions of users worldwide.
           </p>
           <div class="flex gap-3">
-            <button class="btn btn-outline btn-success">INTERVIEW</button>
-            <button class="btn btn-outline btn-error">REJECTED</button>
+            <button id="interviewBtn" class="btn btn-outline btn-success">
+              INTERVIEW
+            </button>
+            <button id="rejctedBtn" class="btn btn-outline btn-error">
+              REJECTED
+            </button>
           </div>
         </div>
         <div>
-          <a href="">
+          <a id="deleteLogo" href="">
             <img
               class="p-2 w-10 outline outline-slate-400 rounded-full"
               src="./images/trash-can-regular-full.svg"
@@ -101,6 +126,12 @@
         </div>
       </div>
     </section>
+    <!-- Empty State -->
+    <div>
+      <div><img src="./images/jobs.png" alt="" /></div>
+      <p>No jobs available</p>
+      <p>Check back soon for new job opportunities</p>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
