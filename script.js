@@ -3,13 +3,16 @@ let jobsCorner = document.getElementById("jobs-corner");
 
 let allJobs = document.getElementById("allJobs");
 
-totalCount.innerText = allJobs.children.length;
-jobsCorner.innerText = allJobs.children.length;
+// totalCount.innerText = allJobs.children.length;
+// jobsCorner.innerText = allJobs.children.length;
 
 // Buttons
 const tabActive = ["btn", "btn-primary"];
-// const tabActive = ["btn bg-white px-10 py-5"];
 const tabInactive = ["btn", "btn-soft"];
+
+const allSection = document.getElementById("all-section");
+const interviewSection = document.getElementById("interview-section");
+const rejectSection = document.getElementById("reject-section");
 
 let currentTab = "all";
 
@@ -24,6 +27,17 @@ function switchTab(tab) {
       tabName.classList.remove(...tabActive);
       tabName.classList.add(...tabInactive);
     }
+  }
+  const pages = [allSection, interviewSection, rejectSection];
+  for (const section of pages) {
+    section.classList.add("hidden");
+  }
+  if (tab === "all") {
+    allSection.classList.remove("hidden");
+  } else if (tab === "interview") {
+    interviewSection.classList.remove("hidden");
+  } else if (tab === "rejected") {
+    rejectSection.classList.remove("hidden");
   }
 }
 switchTab(currentTab);
