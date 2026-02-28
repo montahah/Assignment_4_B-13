@@ -1,10 +1,9 @@
+// All Count
 let totalCount = document.getElementById("total-count");
+let interviewCount = document.getElementById("interview-count");
+let rejectCount = document.getElementById("reject-count");
+
 let jobsCorner = document.getElementById("jobs-corner");
-
-let allJobs = document.getElementById("allJobs");
-
-// totalCount.innerText = allJobs.children.length;
-// jobsCorner.innerText = allJobs.children.length;
 
 // Buttons
 const tabActive = ["btn", "btn-primary"];
@@ -40,4 +39,23 @@ function switchTab(tab) {
     rejectSection.classList.remove("hidden");
   }
 }
+
+totalCount.innerText = allSection.children.length;
+jobsCorner.innerText = allSection.children.length;
+
 switchTab(currentTab);
+
+// All Sections
+document
+  .getElementById("all-sections")
+  .addEventListener("click", function (event) {
+    const clickedElement = event.target;
+
+    if (clickedElement.classList.contains("interview-btn")) {
+      console.log("hello");
+    } else if (clickedElement.classList.contains("rejected-btn")) {
+      console.log("hello");
+    } else if (clickedElement.classList.contains("delete-btn")) {
+      console.log("hello");
+    }
+  });

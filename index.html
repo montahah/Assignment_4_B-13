@@ -47,11 +47,13 @@
         </div>
         <div class="single-job-board bg-white p-5 rounded-xl">
           <p>Interview</p>
-          <h3 class="font-bold text-2xl text-green-500">0</h3>
+          <h3 id="interview-count" class="font-bold text-2xl text-green-500">
+            0
+          </h3>
         </div>
         <div class="single-job-board bg-white p-5 rounded-xl">
           <p>Rejected</p>
-          <h3 class="font-bold text-2xl text-red-500">0</h3>
+          <h3 id="reject-count" class="font-bold text-2xl text-red-500">0</h3>
         </div>
       </div>
     </section>
@@ -87,57 +89,64 @@
       </div>
     </section>
 
-    <!-- Job Section -->
-    <section
-      id="all-section"
-      class="hidden jobs-section container mx-auto py-5 mt-5 space-y-5">
-      <div id="singleJob" class="flex justify-between bg-white p-6 rounded-xl">
-        <div class="jobs space-y-5">
-          <h2 id="companyName" class="text-[18px] font-bold">
-            Mobile First Corp
-          </h2>
-          <p id="jobDesignation" class="font-medium text-gray-600">
-            React Native Developer
-          </p>
-          <p id="jobInfo" class="text-gray-600">
-            Remote • Full-time • $130,000 - $175,000
-          </p>
-          <p id="applyBtn" class="btn bg-[#EEF4FF]">Not Applied</p>
-          <p id="jobParagraph" class="text-gray-600">
-            Build cross-platform mobile applications using React Native. Work on
-            products used by millions of users worldwide.
-          </p>
-          <div class="flex gap-3">
-            <button id="interviewBtn" class="btn btn-outline btn-success">
-              INTERVIEW
-            </button>
-            <button id="rejctedBtn" class="btn btn-outline btn-error">
-              REJECTED
+    <!-- All Sections -->
+    <section id="all-sections">
+      <!-- Job Section -->
+      <section
+        id="all-section"
+        class="hidden jobs-section container mx-auto py-5 mt-5 space-y-5">
+        <div
+          id="singleJob"
+          class="flex justify-between bg-white p-6 rounded-xl">
+          <div class="jobs space-y-5">
+            <h2 id="companyName" class="text-[18px] font-bold">
+              Mobile First Corp
+            </h2>
+            <p id="jobDesignation" class="font-medium text-gray-600">
+              React Native Developer
+            </p>
+            <p id="jobInfo" class="text-gray-600">
+              Remote • Full-time • $130,000 - $175,000
+            </p>
+            <p id="applyBtn" class="btn bg-[#EEF4FF]">Not Applied</p>
+            <p id="jobParagraph" class="text-gray-600">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="flex gap-3">
+              <button
+                id="interview-btn"
+                class="interview-btn btn btn-outline btn-success">
+                INTERVIEW
+              </button>
+              <button
+                id="rejct-btn"
+                class="rejected-btn btn btn-outline btn-error">
+                REJECTED
+              </button>
+            </div>
+          </div>
+          <div>
+            <button class="delete-btn btn rounded-full p-3">
+              <i class="delete-btn fa-solid fa-trash"></i>
             </button>
           </div>
         </div>
-        <div>
-          <a id="deleteLogo" href="">
-            <img
-              class="p-2 w-10 outline outline-slate-400 rounded-full"
-              src="./images/trash-can-regular-full.svg"
-              alt=""
-          /></a>
-        </div>
-      </div>
+      </section>
+      <!-- Interview Section -->
+      <section
+        id="interview-section"
+        class="hidden mt-5 container mx-auto text-xl font-semibold">
+        Interview Section
+      </section>
+      <!-- Reject Section -->
+      <section
+        id="reject-section"
+        class="hidden mt-5 container mx-auto text-xl font-semibold">
+        Reject Section
+      </section>
     </section>
 
-    <!-- Interview Section -->
-    <section
-      id="interview-section"
-      class="hidden mt-5 container mx-auto text-xl font-semibold">
-      Interview Section
-    </section>
-    <section
-      id="reject-section"
-      class="hidden mt-5 container mx-auto text-xl font-semibold">
-      Reject Section
-    </section>
     <!-- Empty State -->
     <div
       id="empty-slate"
