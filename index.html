@@ -30,11 +30,13 @@
       * {
         font-family: "Geist", sans-serif;
         /* background-color: #f8fafc; */
-        /* background: #f8fafc; */
+      }
+      body {
+        background-color: #f8fafc;
       }
     </style>
   </head>
-  <body class="bg-[#f8fafc]">
+  <body class="">
     <!-- Header Section -->
     <section class="py-10 container mx-auto">
       <h1 class="text-4xl font-semibold mb-5 text-[#002C5C]">
@@ -97,7 +99,7 @@
         class="hidden jobs-section container mx-auto py-5 mt-5 space-y-5">
         <div
           id="singleJob"
-          class="flex justify-between bg-white p-6 rounded-xl">
+          class="flex justify-between bg-white p-6 rounded-xl Card">
           <div class="jobs space-y-5">
             <h2 id="companyName" class="text-[18px] font-bold">
               Mobile First Corp
@@ -108,7 +110,7 @@
             <p id="jobInfo" class="text-gray-600">
               Remote • Full-time • $130,000 - $175,000
             </p>
-            <p id="applyBtn" class="btn bg-[#EEF4FF]">Not Applied</p>
+            <p id="applyBtn" class="btn bg-[#EEF4FF] Status">Not Applied</p>
             <p id="jobParagraph" class="text-gray-600">
               Build cross-platform mobile applications using React Native. Work
               on products used by millions of users worldwide.
@@ -136,20 +138,20 @@
       <!-- Interview Section -->
       <section
         id="interview-section"
-        class="hidden mt-5 container mx-auto text-xl font-semibold">
+        class="hidden mt-5 pb-5 container mx-auto text-xl font-semibold">
         Interview Section
       </section>
       <!-- Reject Section -->
       <section
         id="reject-section"
-        class="hidden mt-5 container mx-auto text-xl font-semibold">
+        class="hidden mt-5 pb-5 container mx-auto text-xl font-semibold">
         Reject Section
       </section>
     </section>
 
     <!-- Empty State -->
     <div
-      id="empty-slate"
+      id="empty-state"
       class="flex flex-col justify-center text-center py-20 gap-3 hidden">
       <div class="text-center w-32 mx-auto opacity-50">
         <img src="./images/jobs.png" alt="" />
